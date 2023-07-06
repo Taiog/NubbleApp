@@ -4,6 +4,7 @@ import {Text} from './src/components/Text/Text';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme/theme';
 import {Button} from './src/components/Button/Button';
+import {Icon} from './src/components/Icon/Icon';
 
 function App(): JSX.Element {
   return (
@@ -14,10 +15,7 @@ function App(): JSX.Element {
             CoffStack
           </Text>
           <Button title="Entrar" marginBottom="s12" />
-          <Button title="Entrar" loading />
-          <Button title="Entrar" disabled />
-          <Button preset="outline" title="Entrar" />
-          <Button preset="outline" title="Entrar" loading />
+          <Icon name="camera" size={50} color="buttonPrimary" />
         </View>
       </SafeAreaView>
     </ThemeProvider>
