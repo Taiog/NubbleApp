@@ -9,6 +9,7 @@ import {CameraIcon} from '../../assets/icons/CameraIcon';
 import {ChatIcon} from '../../assets/icons/ChatIcon';
 import {ChatOnIcon} from '../../assets/icons/ChatOnIcon';
 import {CheckIcon} from '../../assets/icons/CheckIcon';
+import {CheckRoundIcon} from '../../assets/icons/CheckRoundIcon';
 import {ChevronRightIcon} from '../../assets/icons/ChevronRightIcon';
 import {CommentIcon} from '../../assets/icons/CommentIcon';
 import {EyeOffIcon} from '../../assets/icons/EyeOffIcon';
@@ -29,13 +30,14 @@ import {TrashIcon} from '../../assets/icons/TrashIcon';
 import {ThemeColors} from '../../theme/theme';
 import {useAppTheme} from '../../hooks/useAppTheme';
 import {Pressable} from 'react-native';
+import {MessageRoundIcon} from '../../assets/icons/MessageRoundIcon';
 
 export interface IconBase {
   size?: number;
   color?: string;
 }
 
-interface Props {
+export interface IconProps {
   name: iconName;
   color?: ThemeColors;
   size?: number;
@@ -45,9 +47,9 @@ interface Props {
 export function Icon({
   name,
   color = 'backgroundContrast',
-  size = 20,
+  size,
   onPress,
-}: Props) {
+}: IconProps) {
   const {colors} = useAppTheme();
   const SVGIcon = iconRegistry[name];
 
@@ -73,6 +75,7 @@ const iconRegistry = {
   chat: ChatIcon,
   chatOn: ChatOnIcon,
   check: CheckIcon,
+  checkRound: CheckRoundIcon,
   comment: CommentIcon,
   chevronRight: ChevronRightIcon,
   eyeOn: EyeOnIcon,
@@ -84,6 +87,7 @@ const iconRegistry = {
   home: HomeIcon,
   homeFill: HomeFillIcon,
   message: MessageIcon,
+  messageRound: MessageRoundIcon,
   newPost: NewPostIcon,
   profile: ProfileIcon,
   profileFill: ProfileFillIcon,
