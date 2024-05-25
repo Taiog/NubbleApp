@@ -1,4 +1,4 @@
-import { Post } from "../../../../domain/Post/types";
+import { Post } from "../../../../domain/Post/postTypes";
 import { Box, TouchableOpacityBox } from "../../../Box/Box";
 import { Icon } from "../../../Icon/Icon";
 import { Text } from "../../../Text/Text";

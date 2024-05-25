@@ -1,7 +1,7 @@
 import { Image } from "react-native";
 import { Box } from "../../../Box/Box";
 import { Text } from "../../../Text/Text";
-import { Post } from "../../../../domain/Post/types";
+import { Post } from "../../../../domain/Post/postTypes";
 
 type Props = Pick<Post, 'author'>
 export function PostHeader({ author }: Props) {

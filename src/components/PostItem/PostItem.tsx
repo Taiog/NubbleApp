@@ -1,4 +1,4 @@
-import { Post } from "../../domain/Post/types"
+import { Post } from "../../domain/Post/postTypes"
 import { Box } from "../Box/Box"
 import { PostActions } from "./components/PostActions/PostActions"
 import { PostBottom } from "./components/PostBottom/PostBottom"
